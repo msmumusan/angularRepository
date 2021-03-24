@@ -12,6 +12,7 @@ import { EventsComponent } from './events/events.component';
 import { TwoWayComponent } from './two-way/two-way.component';
 import { ChildInputComponent } from './child-input/child-input.component'
 import { FormsModule } from '@angular/forms';
+import { BorderColorDirective } from './properties/border-color.directive';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     AttributesComponent,
     EventsComponent,
     TwoWayComponent,
-    ChildInputComponent
+    ChildInputComponent,
+    BorderColorDirective
 
   ],
   imports: [

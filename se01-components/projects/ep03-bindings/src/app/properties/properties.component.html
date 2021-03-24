@@ -1,6 +1,6 @@
 <h2>Properties Binding</h2>
 
-<div class="mb-4">
+<div class="card mb-4">
     <div class="card-header">Dom Property</div>
     <div class="card-body">
         <button (click)="switchBtnState()" class="btn btn-primary mr-2">{{hideBtn ? 'ClickMe' : 'Show'}}</button>
@@ -9,23 +9,22 @@
 </div>
 
 
-<div class="mb-4">
+<div class="card mb-4">
     <div class="card-header">Component Property</div>
     <div class="card-body">
-
         <div class="row">
             <div class="col-4">
                 <div class="input-group">
-                    <input #keywordInput type="text" class="form-control">
+                    <input #inputKeyword type="text" class="form-control">
                     <div class="input-group-append">
-                        <span (click)="setKeyword(keywordInput)" class="input-group-text">Add</span>
+                        <span (click)="getInputKeyword(inputKeyword)" class="input-group-text">Add</span>
                     </div>
-
 
                 </div>
             </div>
-            <div class="col-8">
-                <app-prop-child-binding [keyword]="targetKeyword"></app-prop-child-binding>
+
+            <div class="col-4">
+                <app-prop-child-binding [inputKeyword]="parentKeyword"></app-prop-child-binding>
             </div>
         </div>
     </div>
@@ -33,7 +32,7 @@
 
 
 
-<div class="mb-4">
+<div class="card mb-4">
     <div class="card-header">Directive Property</div>
     <div class="card-body">
         <div class="row">
@@ -49,10 +48,8 @@
             </div>
 
             <!--Not Working-->
-            <!--<div [appBackgroundColor]="backGround" class="col-8 bordered"></div>-->
-            <div class="col-8 bordered">
-                <appBackgroudColour [appBackgroundColor]="backGround"></appBackgroudColour>
-            </div>
+            <div [appBackgroudColour]="backGround" class="col-8 bordered"></div>
+
 
 
 

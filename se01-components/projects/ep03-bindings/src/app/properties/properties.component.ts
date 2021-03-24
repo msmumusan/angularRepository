@@ -14,11 +14,11 @@ export class PropertiesComponent {
     this.hideBtn = !this.hideBtn
   }
 
-  targetKeyword: string = ""
-
-  setKeyword(input: any) {
-    this.targetKeyword = input.value
-    input.value = ""
+  parentKeyword: string =""
+ 
+  getInputKeyword(input: any){
+    this.parentKeyword = input.value
+    input.value =""
   }
 
   backGround = "Yellow"
